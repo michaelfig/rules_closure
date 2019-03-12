@@ -226,10 +226,10 @@ def com_google_auto_factory():
     java_import_external(
         name = "com_google_auto_factory",
         licenses = ["notice"],  # Apache 2.0
-        jar_sha256 = "e6bed6aaa879f568449d735561a6a26a5a06f7662ed96ca88d27d2200a8dc6cf",
+        jar_sha256 = "bd26a49f93e5de5fcc8507e1a6554814adc9d5cb682f9df9057f8aadf60d2c91",
         jar_urls = [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/auto/factory/auto-factory/1.0-beta5/auto-factory-1.0-beta5.jar",
-            "https://repo1.maven.org/maven2/com/google/auto/factory/auto-factory/1.0-beta5/auto-factory-1.0-beta5.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/auto/factory/auto-factory/1.0-beta6/auto-factory-1.0-beta6.jar",
+            "https://repo1.maven.org/maven2/com/google/auto/factory/auto-factory/1.0-beta6/auto-factory-1.0-beta6.jar",
         ],
         # Auto Factory ships its annotations, runtime, and processor in the same
         # jar. The generated code must link against this jar at runtime. So our
