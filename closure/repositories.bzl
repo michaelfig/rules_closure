@@ -278,10 +278,10 @@ def com_google_auto_value():
     # because none of these jars become runtime dependencies.
     java_import_external(
         name = "com_google_auto_value",
-        jar_sha256 = "fd811b92bb59ae8a4cf7eb9dedd208300f4ea2b6275d726e4df52d8334aaae9d",
+        jar_sha256 = "0aa5463f85a210aacecbebaa45e61b79ec17e903218d79f8db9e1efde06b3c7f",
         jar_urls = [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/auto/value/auto-value/1.6/auto-value-1.6.jar",
-            "https://repo1.maven.org/maven2/com/google/auto/value/auto-value/1.6/auto-value-1.6.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/auto/value/auto-value/1.6.3/auto-value-1.6.3.jar",
+            "https://repo1.maven.org/maven2/com/google/auto/value/auto-value/1.6.3/auto-value-1.6.3.jar",
         ],
         licenses = ["notice"],  # Apache 2.0
         generated_rule_name = "processor",
