@@ -25,7 +25,7 @@ java_library(
     #             functionality into sub-package that makes Dagger optional.
     deps = [
         ":worker_protocol_java_proto",
-        "@com_google_auto_value",
+        "@com_google_auto_value_16",
         "@com_google_code_findbugs_jsr305",
         "@com_google_dagger",
         "@com_google_guava",

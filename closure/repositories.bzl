@@ -243,7 +243,7 @@ def com_google_auto_factory():
             "    exports = [\":jar\"],",
             "    runtime_deps = [",
             "        \"@com_google_auto_common\",",
-            "        \"@com_google_auto_value\",",
+            "        \"@com_google_auto_value_16\",",
             "        \"@com_google_guava\",",
             "        \"@com_google_java_format\",",
             "        \"@com_squareup_javapoet\",",
@@ -277,7 +277,7 @@ def com_google_auto_value():
     # AutoValue 1.6+ shades Guava, Auto Common, and JavaPoet. That's OK
     # because none of these jars become runtime dependencies.
     java_import_external(
-        name = "com_google_auto_value",
+        name = "com_google_auto_value_16",
         jar_sha256 = "fd811b92bb59ae8a4cf7eb9dedd208300f4ea2b6275d726e4df52d8334aaae9d",
         jar_urls = [
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/auto/value/auto-value/1.6/auto-value-1.6.jar",
@@ -285,7 +285,7 @@ def com_google_auto_value():
         ],
         licenses = ["notice"],  # Apache 2.0
         generated_rule_name = "processor",
-        exports = ["@com_google_auto_value_annotations"],
+        exports = ["@com_google_auto_value_annotations_16"],
         extra_build_file_content = "\n".join([
             "java_plugin(",
             "    name = \"AutoAnnotationProcessor\",",
@@ -312,21 +312,21 @@ def com_google_auto_value():
             ")",
             "",
             "java_library(",
-            "    name = \"com_google_auto_value\",",
+            "    name = \"com_google_auto_value_16\",",
             "    exported_plugins = [",
             "        \":AutoAnnotationProcessor\",",
             "        \":AutoOneOfProcessor\",",
             "        \":AutoValueProcessor\",",
             "    ],",
-            "    exports = [\"@com_google_auto_value_annotations\"],",
+            "    exports = [\"@com_google_auto_value_annotations_16\"],",
             ")",
         ]),
     )
 
 def com_google_auto_value_annotations():
-    # It should be sufficient to simply depend on @com_google_auto_value.
+    # It should be sufficient to simply depend on @com_google_auto_value_16.
     java_import_external(
-        name = "com_google_auto_value_annotations",
+        name = "com_google_auto_value_annotations_16",
         jar_sha256 = "d095936c432f2afc671beaab67433e7cef50bba4a861b77b9c46561b801fae69",
         jar_urls = [
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/auto/value/auto-value-annotations/1.6/auto-value-annotations-1.6.jar",
@@ -334,7 +334,7 @@ def com_google_auto_value_annotations():
         ],
         licenses = ["notice"],  # Apache 2.0
         neverlink = True,
-        default_visibility = ["@com_google_auto_value//:__pkg__"],
+        default_visibility = ["@com_google_auto_value_16//:__pkg__"],
     )
 
 def com_google_closure_stylesheets():

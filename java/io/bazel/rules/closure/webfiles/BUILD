@@ -24,7 +24,7 @@ java_library(
         "//java/io/bazel/rules/closure:webpath",
         "//java/io/bazel/rules/closure/webfiles/compiler",
         "//java/io/bazel/rules/closure/worker",
-        "@com_google_auto_value",
+        "@com_google_auto_value_16",
         "@com_google_closure_stylesheets",
         "@com_google_code_findbugs_jsr305",
         "@com_google_dagger",
