@@ -485,6 +485,7 @@ def com_google_dagger_producers():
         deps = [
             "@com_google_dagger//:runtime",
             "@com_google_guava",
+            "@com_google_errorprone_error_prone_annotations",
         ],
         generated_rule_name = "runtime",
         extra_build_file_content = "\n".join([
