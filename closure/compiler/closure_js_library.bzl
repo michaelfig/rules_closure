@@ -224,6 +224,12 @@ def _closure_js_library_impl(
         args.append("--src")
         args.append(f.path)
         inputs.append(f)
+    if len(srcs) == 0:
+        emptyfile = actions.declare_file("%s.js" % label.name)
+        actions.write(output = emptyfile, content = "goog.module('empty');\nexports = 1;\n")
+        args.append("--src")
+        args.append(emptyfile.path)
+        inputs.append(emptyfile)
 
     # In order for JsChecker to turn weird Bazel paths into ES6 module names, we
     # need to give it a list of path prefixes to strip. By default, the ES6
