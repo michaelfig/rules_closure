@@ -226,7 +226,7 @@ def _closure_js_library_impl(
         inputs.append(f)
     if len(srcs) == 0:
         emptyfile = actions.declare_file("%s.js" % label.name)
-        actions.write(output = emptyfile, content = "goog.module('empty');\nexports = 1;\n")
+        actions.write(output = emptyfile, content = "")
         args.append("--src")
         args.append(emptyfile.path)
         inputs.append(emptyfile)
