@@ -264,6 +264,9 @@ def library_level_checks(
         args.append(s)
     if lenient:
         args.append("--lenient")
+    if not srcs:
+        actions.write(output = output, content = "")
+        return
     actions.run(
         inputs = inputs,
         outputs = [output],

@@ -124,6 +124,9 @@ public final class JsCompiler implements CommandLineProgram {
           // TODO(jart): Remove this when it's added to open source Closure Compiler.
           exportTestFunctions = true;
           continue;
+        case "--lenient":
+          // TODO(mfig): Remove this when it's added to open source Closure Compiler.
+          continue;
         case "--js_module_root":
           roots.add(iargs.peek());
           break;
