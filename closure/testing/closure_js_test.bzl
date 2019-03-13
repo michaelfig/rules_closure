@@ -66,7 +66,6 @@ def closure_js_test(
             debug = True,
             defs = defs,
             entry_points = entry_points,
-            lenient = lenient,
             formatting = "PRETTY_PRINT",
             visibility = visibility,
             testonly = True,
