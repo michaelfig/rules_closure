@@ -158,6 +158,21 @@ def _impl(ctx):
     for entry_point in ctx.attr.entry_points:
         args.append("--entry_point")
         args.append(entry_point)
+    if ctx.attr.lenient:
+        for suppress in [
+            "analyzerChecks",
+            "analyzerChecksInternal",
+            "deprecated",
+            "legacyGoogScopeRequire",
+            "lintChecks",
+            "missingOverride",
+            "reportUnknownTypes",
+            "strictCheckTypes",
+            "superfluousSuppress",
+            "unnecessaryEscape",
+        ]:
+            args.append("--suppress")
+            args.append(suppress)
 
     # It would be quite onerous to put an /** @export */ and entry_point on every
     # single testFoo, setUp, and tearDown function. This undocumented flag is a
@@ -288,6 +303,7 @@ closure_js_binary = rule(
         "entry_points": attr.string_list(),
         "formatting": attr.string(),
         "language": attr.string(default = JS_LANGUAGE_OUT_DEFAULT),
+        "lenient": attr.bool(default = False),
         "nodefs": attr.string_list(),
         "output_wrapper": attr.string(),
         "property_renaming_report": attr.output(),
