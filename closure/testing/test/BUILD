@@ -99,6 +99,23 @@ closure_js_test(
     ],
 )
 
+closure_js_library(
+    name = "goog_testSuite_lib",
+    srcs = ["goog_testSuite.js"],
+)
+
+closure_js_test(
+    name = "goog_testSuite_test",
+    srcs = ["goog_testSuite_test.js"],
+    entry_points = {
+        "goog_testSuite_test.js": ["rules_closure.GoogTestSuiteTest"],
+    },
+    deps = [
+        ":goog_testSuite_lib",
+        "//closure/library:testing",
+    ],
+)
+
 genrule(
     name = "fontdemo",
     srcs = [
