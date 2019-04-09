@@ -625,10 +625,10 @@ def com_google_javascript_closure_compiler():
         name = "com_google_javascript_closure_compiler",
         licenses = ["reciprocal"],  # MPL v1.1 (Rhino AST), Apache 2.0 (JSCompiler)
         jar_urls = [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/javascript/closure-compiler-unshaded/v20180805/closure-compiler-unshaded-v20180805.jar",
-            "http://repo1.maven.org/maven2/com/google/javascript/closure-compiler-unshaded/v20180805/closure-compiler-unshaded-v20180805.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/javascript/closure-compiler-unshaded/v20190325/closure-compiler-unshaded-v20190325.jar",
+            "http://repo1.maven.org/maven2/com/google/javascript/closure-compiler-unshaded/v20190325/closure-compiler-unshaded-v20190325.jar",
         ],
-        jar_sha256 = "facf537aad7f643c92771f71bd8d9c9b6830ec2aa56e458d2411678d8dc32368",
+        jar_sha256 = "ae9ed32b24f59a4d412efb7196618c592cb23469d81103a4bec3c7cdd81dfe67",
         deps = [
             "@com_google_code_gson",
             "@com_google_guava",
@@ -676,23 +676,23 @@ def com_google_jsinterop_annotations():
 def com_google_protobuf():
     http_archive(
         name = "com_google_protobuf",
-        strip_prefix = "protobuf-3.6.1.3",
-        sha256 = "73fdad358857e120fd0fa19e071a96e15c0f23bb25f85d3f7009abfd4f264a2a",
+        strip_prefix = "protobuf-3.7.1",
+        sha256 = "f1748989842b46fa208b2a6e4e2785133cfcc3e4d43c17fecb023733f0f5443f",
         urls = [
-            "https://mirror.bazel.build/github.com/google/protobuf/archive/v3.6.1.3.tar.gz",
-            "https://github.com/protocolbuffers/protobuf/archive/v3.6.1.3.tar.gz",
+            "https://mirror.bazel.build/github.com/google/protobuf/archive/v3.7.1.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v3.7.1.tar.gz",
         ],
     )
 
 def com_google_protobuf_js():
     http_archive(
         name = "com_google_protobuf_js",
-        strip_prefix = "protobuf-3.6.1.3/js",
+        strip_prefix = "protobuf-3.7.1/js",
         urls = [
-            "https://mirror.bazel.build/github.com/google/protobuf/archive/v3.6.1.3.tar.gz",
-            "https://github.com/protocolbuffers/protobuf/archive/v3.6.1.3.tar.gz",
+            "https://mirror.bazel.build/github.com/google/protobuf/archive/v3.7.1.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v3.7.1.tar.gz",
         ],
-        sha256 = "73fdad358857e120fd0fa19e071a96e15c0f23bb25f85d3f7009abfd4f264a2a",
+        sha256 = "f1748989842b46fa208b2a6e4e2785133cfcc3e4d43c17fecb023733f0f5443f",
         build_file = str(Label("//closure/protobuf:protobuf_js.BUILD")),
     )
 
@@ -701,10 +701,10 @@ def com_google_template_soy():
         name = "com_google_template_soy",
         licenses = ["notice"],  # Apache 2.0
         jar_urls = [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/template/soy/2018-03-14/soy-2018-03-14.jar",
-            "https://repo1.maven.org/maven2/com/google/template/soy/2018-03-14/soy-2018-03-14.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/template/soy/2019-03-11/soy-2019-03-11.jar",
+            "https://repo1.maven.org/maven2/com/google/template/soy/2019-03-11/soy-2019-03-11.jar",
         ],
-        jar_sha256 = "449664a12ae7f94d6ef72a0271edfe21fe6605fa749b152fce45eccb3e4d09b1",
+        jar_sha256 = "ceb0e78cf1cadefa17493bbd0a913314558e34dd30e4d7d92e406f69c2670725",
         deps = [
             "@args4j",
             "@com_google_code_findbugs_jsr305",
@@ -742,10 +742,10 @@ def com_google_template_soy():
 def com_google_template_soy_jssrc():
     http_archive(
         name = "com_google_template_soy_jssrc",
-        sha256 = "c76ab4cb6e46a7c76336640b3c40d6897b420209a6c0905cdcd32533dda8126a",
+        sha256 = "188a28d3935b0661631bdb518a97d03edd4a597a13a09dd3d92a138c09b59780",
         urls = [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/template/soy/2018-03-14/soy-2018-03-14-jssrc_js.jar",
-            "https://repo1.maven.org/maven2/com/google/template/soy/2018-03-14/soy-2018-03-14-jssrc_js.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/template/soy/2019-03-11/soy-2019-03-11-jssrc_js.jar",
+            "https://repo1.maven.org/maven2/com/google/template/soy/2019-03-11/soy-2019-03-11-jssrc_js.jar",
         ],
         build_file = str(Label("//closure/templates:soy_jssrc.BUILD")),
         type = "zip",
