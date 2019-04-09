@@ -97,6 +97,7 @@ closure_js_test(
         ":lenient_lib",
         "//closure/library:testing",
     ],
+    entry_points = ['rules_closure.LenientTest'],
 )
 
 closure_js_test(
