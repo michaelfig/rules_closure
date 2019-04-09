@@ -8,7 +8,10 @@ goog.scope(function() {
     
     goog.testing.testSuite({
       testMe: function() {
-        assertEquals(Lenient(), 123);
+        // Without "lenient = True" on the lenient_test rule, this line
+        // fails with "ERROR - could not determine the type of this expression"
+        const val = Lenient();
+        assertEquals(val, 123);
       }
     });
     
